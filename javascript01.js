@@ -40,6 +40,20 @@ const today = new Date();
 console.log(today);
 console.log(today.toString());
 
+
+const bakery = {
+  saltBread: "소금빵",
+  chocoBread: "초코빵",
+  cheeseBread: "치즈빵"
+};
+
+console.log("Object.entries() : ", Object.entries(bakery));
+console.log("Object.keys() : ", Object.keys(bakery));
+console.log("Object.values() : ", Object.values(bakery));
+
+Object.freeze(bakery); // 변경이 되지 않음
+Object.seal(bakery); // 변경이 가능하지만 새 속성 추가가 되지 않음
+
 // 함수
 function bread() {
   console.log("빵");
