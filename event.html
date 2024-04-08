@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {display: flex; flex-direction: column; gap: 24px;}
+    div {margin: 8px 0; padding: 8px;border: 1px solid #ccc;border-radius: 4px;}
+  </style>
+</head>
+<body>
+  <div>
+    <h3>Click Event</h3>
+    <button id="myButton">Click Me</button>
+  </div>
+  <div>
+    <h3>Mouse Event</h3>
+    <div id="myDiv" style="width: 200px; height: 40px; background-color:lightblue;">Mouse over me</div>
+  </div>
+  <div>
+    <h3>Keyboard Event</h3>
+    <input type="text" id="myInput" placeholder="Press Enter">
+  </div>
+  <script>
+    document.getElementById("myButton").addEventListener("click", function() {
+      console.log("Click Event");
+    })
+    document.getElementById("myDiv").addEventListener("mouseover", function() {
+      this.style.backgroundColor = "black";
+      this.style.color = "white";
+      console.log("Mouseover Event");
+    })
+    document.getElementById("myDiv").addEventListener("mouseout", function() {
+      this.style.backgroundColor = "white";
+      this.style.color = "black";
+      console.log("Mouseover Event");
+    })
+    document.getElementById("myInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      console.log("Enter key pressed!");
+    }
+    });
+  </script>
+</body>
+</html>
