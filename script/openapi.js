@@ -7,7 +7,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('/api/data')
+  fetch('/api/read-data')
     .then(response => {
       return response.json();
     })
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function updateTable(items) {
-  console.log(items);
   if (items && items.length > 0) {
     document.querySelector("#dataTable thead").innerHTML =
     `<tr>
@@ -31,7 +30,7 @@ function updateTable(items) {
       return `<tr>
       ${Object.keys(item).map(key => `<th>${item[key]}</th>`).join("")}
     </tr>`;
-    })
+    }).join("");
   } else {
     clearTable();
   }
