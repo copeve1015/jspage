@@ -38,16 +38,6 @@ fetch('https://api.thedogapi.com/v1/breeds')
   })
   .catch(error => console.log(error));
 
-  // async function getImageFromImageId(referenceImageId) {
-  //   try {
-  //     const responseImage = await fetch(`https://api.thedogapi.com/v1/images/${referenceImageId}`);
-  //     const imageData = await responseImage.json();
-  //     return imageData.url;
-  //   } catch (error) {
-  //     console.log(error);
-  //     return null;
-  //   }
-  // }
 
     async function getImageFromImageId(referenceImageId) {
     try {
