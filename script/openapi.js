@@ -9,6 +9,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   fetch('/api/read-data')
     .then(response => {
+      console.log(response);
       return response.json();
     })
     .then(data => {
